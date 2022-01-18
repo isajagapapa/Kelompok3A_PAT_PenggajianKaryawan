@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/gaji/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/gaji/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/gaji/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceGaji" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_jabatan_InputMessage">
+    <wsdl:part name="parameters" element="tns:jabatan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_jabatan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:jabatanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editjabatan_InputMessage">
+    <wsdl:part name="parameters" element="tns:editjabatan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editjabatan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editjabatanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletejabatan_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletejabatan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletejabatan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletejabatanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_jabatanview_InputMessage">
+    <wsdl:part name="parameters" element="tns:jabatanview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_jabatanview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:jabatanviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_golongan_InputMessage">
+    <wsdl:part name="parameters" element="tns:golongan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_golongan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:golonganResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editgolongan_InputMessage">
+    <wsdl:part name="parameters" element="tns:editgolongan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editgolongan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editgolonganResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletegolongan_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletegolongan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletegolongan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletegolonganResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Golongan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Golongan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Golongan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GolonganResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_karyawan_InputMessage">
+    <wsdl:part name="parameters" element="tns:karyawan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_karyawan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:karyawanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editkaryawan_InputMessage">
+    <wsdl:part name="parameters" element="tns:editkaryawan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editkaryawan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editkaryawanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletekaryawan_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletekaryawan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletekaryawan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletekaryawanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Karyawan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Karyawan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Karyawan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KaryawanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_hadir_InputMessage">
+    <wsdl:part name="parameters" element="tns:hadir" />
+  </wsdl:message>
+  <wsdl:message name="IService1_hadir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hadirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_edithadir_InputMessage">
+    <wsdl:part name="parameters" element="tns:edithadir" />
+  </wsdl:message>
+  <wsdl:message name="IService1_edithadir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:edithadirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletehadir_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletehadir" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletehadir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletehadirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Hadir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hadir" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Hadir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HadirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gaji_InputMessage">
+    <wsdl:part name="parameters" element="tns:gaji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gaji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gajiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editgaji_InputMessage">
+    <wsdl:part name="parameters" element="tns:editgaji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editgaji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editgajiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletegaji_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletegaji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletegaji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletegajiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gajisub_InputMessage">
+    <wsdl:part name="parameters" element="tns:Gajisub" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gajisub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GajisubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gajiview_InputMessage">
+    <wsdl:part name="parameters" element="tns:gajiview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gajiview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gajiviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gaji_InputMessage">
+    <wsdl:part name="parameters" element="tns:Gaji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gaji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GajiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gajiviewall_InputMessage">
+    <wsdl:part name="parameters" element="tns:gajiviewall" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gajiviewall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gajiviewallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DataRegist_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataRegist" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DataRegist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataRegistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="jabatan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/jabatan" message="tns:IService1_jabatan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/jabatanResponse" message="tns:IService1_jabatan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editjabatan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editjabatan" message="tns:IService1_editjabatan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editjabatanResponse" message="tns:IService1_editjabatan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletejabatan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletejabatan" message="tns:IService1_deletejabatan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletejabatanResponse" message="tns:IService1_deletejabatan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="jabatanview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/jabatanview" message="tns:IService1_jabatanview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/jabatanviewResponse" message="tns:IService1_jabatanview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="golongan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/golongan" message="tns:IService1_golongan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/golonganResponse" message="tns:IService1_golongan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editgolongan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editgolongan" message="tns:IService1_editgolongan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editgolonganResponse" message="tns:IService1_editgolongan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletegolongan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletegolongan" message="tns:IService1_deletegolongan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletegolonganResponse" message="tns:IService1_deletegolongan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Golongan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Golongan" message="tns:IService1_Golongan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GolonganResponse" message="tns:IService1_Golongan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="karyawan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/karyawan" message="tns:IService1_karyawan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/karyawanResponse" message="tns:IService1_karyawan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editkaryawan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editkaryawan" message="tns:IService1_editkaryawan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editkaryawanResponse" message="tns:IService1_editkaryawan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletekaryawan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletekaryawan" message="tns:IService1_deletekaryawan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletekaryawanResponse" message="tns:IService1_deletekaryawan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Karyawan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Karyawan" message="tns:IService1_Karyawan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/KaryawanResponse" message="tns:IService1_Karyawan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="hadir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/hadir" message="tns:IService1_hadir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/hadirResponse" message="tns:IService1_hadir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="edithadir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/edithadir" message="tns:IService1_edithadir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/edithadirResponse" message="tns:IService1_edithadir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletehadir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletehadir" message="tns:IService1_deletehadir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletehadirResponse" message="tns:IService1_deletehadir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hadir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Hadir" message="tns:IService1_Hadir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/HadirResponse" message="tns:IService1_Hadir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gaji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gaji" message="tns:IService1_gaji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gajiResponse" message="tns:IService1_gaji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editgaji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editgaji" message="tns:IService1_editgaji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editgajiResponse" message="tns:IService1_editgaji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletegaji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletegaji" message="tns:IService1_deletegaji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletegajiResponse" message="tns:IService1_deletegaji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Gajisub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Gajisub" message="tns:IService1_Gajisub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GajisubResponse" message="tns:IService1_Gajisub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gajiview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gajiview" message="tns:IService1_gajiview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gajiviewResponse" message="tns:IService1_gajiview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Gaji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Gaji" message="tns:IService1_Gaji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GajiResponse" message="tns:IService1_Gaji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gajiviewall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gajiviewall" message="tns:IService1_gajiviewall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gajiviewallResponse" message="tns:IService1_gajiviewall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Register" message="tns:IService1_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterResponse" message="tns:IService1_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateRegister" message="tns:IService1_UpdateRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateRegisterResponse" message="tns:IService1_UpdateRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRegister" message="tns:IService1_DeleteRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRegisterResponse" message="tns:IService1_DeleteRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DataRegist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DataRegist" message="tns:IService1_DataRegist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DataRegistResponse" message="tns:IService1_DataRegist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="jabatan">
+      <soap:operation soapAction="http://tempuri.org/IService1/jabatan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editjabatan">
+      <soap:operation soapAction="http://tempuri.org/IService1/editjabatan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletejabatan">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletejabatan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="jabatanview">
+      <soap:operation soapAction="http://tempuri.org/IService1/jabatanview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="golongan">
+      <soap:operation soapAction="http://tempuri.org/IService1/golongan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editgolongan">
+      <soap:operation soapAction="http://tempuri.org/IService1/editgolongan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletegolongan">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletegolongan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Golongan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Golongan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="karyawan">
+      <soap:operation soapAction="http://tempuri.org/IService1/karyawan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editkaryawan">
+      <soap:operation soapAction="http://tempuri.org/IService1/editkaryawan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletekaryawan">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletekaryawan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Karyawan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Karyawan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hadir">
+      <soap:operation soapAction="http://tempuri.org/IService1/hadir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edithadir">
+      <soap:operation soapAction="http://tempuri.org/IService1/edithadir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletehadir">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletehadir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hadir">
+      <soap:operation soapAction="http://tempuri.org/IService1/Hadir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gaji">
+      <soap:operation soapAction="http://tempuri.org/IService1/gaji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editgaji">
+      <soap:operation soapAction="http://tempuri.org/IService1/editgaji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletegaji">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletegaji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gajisub">
+      <soap:operation soapAction="http://tempuri.org/IService1/Gajisub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gajiview">
+      <soap:operation soapAction="http://tempuri.org/IService1/gajiview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gaji">
+      <soap:operation soapAction="http://tempuri.org/IService1/Gaji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gajiviewall">
+      <soap:operation soapAction="http://tempuri.org/IService1/gajiviewall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IService1/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegister">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegister">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataRegist">
+      <soap:operation soapAction="http://tempuri.org/IService1/DataRegist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost/gaji/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceGaji" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceGaji" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfjabatanview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="jabatanview" nillable="true" type="tns:jabatanview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfjabatanview" nillable="true" type="tns:ArrayOfjabatanview" />
+  <xs:complexType name="jabatanview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gajipokok" type="xs:int" />
+      <xs:element minOccurs="0" name="idjabatan" type="xs:int" />
+      <xs:element minOccurs="0" name="jabatan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tjjabatan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="jabatanview" nillable="true" type="tns:jabatanview" />
+  <xs:complexType name="ArrayOfGolongan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Golongan" nillable="true" type="tns:Golongan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGolongan" nillable="true" type="tns:ArrayOfGolongan" />
+  <xs:complexType name="Golongan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="golongan" type="xs:int" />
+      <xs:element minOccurs="0" name="idgolongan" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkeluarga" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkesehatan" type="xs:int" />
+      <xs:element minOccurs="0" name="uanglembur" type="xs:int" />
+      <xs:element minOccurs="0" name="uangmakan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Golongan" nillable="true" type="tns:Golongan" />
+  <xs:complexType name="ArrayOfKaryawan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Karyawan" nillable="true" type="tns:Karyawan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKaryawan" nillable="true" type="tns:ArrayOfKaryawan" />
+  <xs:complexType name="Karyawan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alamat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idgolongan" type="xs:int" />
+      <xs:element minOccurs="0" name="idjabatan" type="xs:int" />
+      <xs:element minOccurs="0" name="idkaryawan" type="xs:int" />
+      <xs:element minOccurs="0" name="jeniskelamin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nip" type="xs:int" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Karyawan" nillable="true" type="tns:Karyawan" />
+  <xs:complexType name="ArrayOfHadir">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hadir" nillable="true" type="tns:Hadir" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHadir" nillable="true" type="tns:ArrayOfHadir" />
+  <xs:complexType name="Hadir">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bulan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idhadir" type="xs:int" />
+      <xs:element minOccurs="0" name="idkaryawan" type="xs:int" />
+      <xs:element minOccurs="0" name="lembur" type="xs:int" />
+      <xs:element minOccurs="0" name="masuk" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hadir" nillable="true" type="tns:Hadir" />
+  <xs:complexType name="ArrayOfGajisub">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Gajisub" nillable="true" type="tns:Gajisub" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGajisub" nillable="true" type="tns:ArrayOfGajisub" />
+  <xs:complexType name="Gajisub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subtot" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Gajisub" nillable="true" type="tns:Gajisub" />
+  <xs:complexType name="ArrayOfgajiview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gajiview" nillable="true" type="tns:gajiview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgajiview" nillable="true" type="tns:ArrayOfgajiview" />
+  <xs:complexType name="gajiview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idgaji" type="xs:int" />
+      <xs:element minOccurs="0" name="idhadir" type="xs:int" />
+      <xs:element minOccurs="0" name="noslip" type="xs:int" />
+      <xs:element minOccurs="0" name="pph" type="xs:int" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:int" />
+      <xs:element minOccurs="0" name="tanggal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gajiview" nillable="true" type="tns:gajiview" />
+  <xs:complexType name="ArrayOfGaji">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Gaji" nillable="true" type="tns:Gaji" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGaji" nillable="true" type="tns:ArrayOfGaji" />
+  <xs:complexType name="Gaji">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bulan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gajipokok" type="xs:int" />
+      <xs:element minOccurs="0" name="golongan" type="xs:int" />
+      <xs:element minOccurs="0" name="jabatan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lembur" type="xs:int" />
+      <xs:element minOccurs="0" name="masuk" type="xs:int" />
+      <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nip" type="xs:int" />
+      <xs:element minOccurs="0" name="noslip" type="xs:int" />
+      <xs:element minOccurs="0" name="pph" type="xs:int" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:int" />
+      <xs:element minOccurs="0" name="tanggal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tjjabatan" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkeluarga" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkesehatan" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+      <xs:element minOccurs="0" name="uanglembur" type="xs:int" />
+      <xs:element minOccurs="0" name="uangmakan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Gaji" nillable="true" type="tns:Gaji" />
+  <xs:complexType name="ArrayOfgajiviewall">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gajiviewall" nillable="true" type="tns:gajiviewall" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgajiviewall" nillable="true" type="tns:ArrayOfgajiviewall" />
+  <xs:complexType name="gajiviewall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bulan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gajipokok" type="xs:int" />
+      <xs:element minOccurs="0" name="golongan" type="xs:int" />
+      <xs:element minOccurs="0" name="jabatan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lembur" type="xs:int" />
+      <xs:element minOccurs="0" name="masuk" type="xs:int" />
+      <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nip" type="xs:int" />
+      <xs:element minOccurs="0" name="noslip" type="xs:int" />
+      <xs:element minOccurs="0" name="pph" type="xs:int" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:int" />
+      <xs:element minOccurs="0" name="tanggal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tjjabatan" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkeluarga" type="xs:int" />
+      <xs:element minOccurs="0" name="tjkesehatan" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+      <xs:element minOccurs="0" name="uanglembur" type="xs:int" />
+      <xs:element minOccurs="0" name="uangmakan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gajiviewall" nillable="true" type="tns:gajiviewall" />
+  <xs:complexType name="ArrayOfDataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataRegister" nillable="true" type="tns:DataRegister" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataRegister" nillable="true" type="tns:ArrayOfDataRegister" />
+  <xs:complexType name="DataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kategori" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataRegister" nillable="true" type="tns:DataRegister" />
+</xs:schema>

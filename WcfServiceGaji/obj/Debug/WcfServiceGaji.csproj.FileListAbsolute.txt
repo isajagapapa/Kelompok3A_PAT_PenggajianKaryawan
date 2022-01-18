@@ -1,0 +1,7 @@
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\bin\WcfServiceGaji.dll.config
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\bin\WcfServiceGaji.dll
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\bin\WcfServiceGaji.pdb
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\obj\Debug\WcfServiceGaji.csproj.AssemblyReference.cache
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\obj\Debug\WcfServiceGaji.csproj.CoreCompileInputs.cache
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\obj\Debug\WcfServiceGaji.dll
+D:\Kuliah\SEMESTER 5\PAT\UAS\Gaji\WcfServiceGaji\obj\Debug\WcfServiceGaji.pdb
